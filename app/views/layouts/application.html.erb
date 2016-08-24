@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Duet</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,8 +11,8 @@
 <body>
   <div class="container">
     <ul class="nav nav-tabs">
-      <li><%= link_to "Duet", welcome_index_path %></li>
-      <li><%= link_to "About", welcome_about_path %></li>
+      <li><%= link_to "Duet", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
     </ul>
 
     <%= yield %>

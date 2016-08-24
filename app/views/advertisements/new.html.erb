@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-8 center-block">
+    <h1>New Advertisement</h1>
+    <%= form_for @advertisement do |f| %>
+      <div class="form-group">
+        <%= f.label :title, class: "sr-only" %>
+        <%= f.text_field :title, class: "form-control", placeholder: "Enter advertisement title" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :body, class: "sr-only" %>
+        <%= f.text_area :body, class: "form-control", placeholder: "Enter advertisement body" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :price, class: "sr-only" %>
+        <%= f.number_field :price, class: "form-control", placeholder: "Enter advertisement price" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Save", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

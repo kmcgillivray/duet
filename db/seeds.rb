@@ -16,9 +16,13 @@ posts = Post.all
   )
 end
 
-Post.find_or_create_by(
+unique_post = Post.find_or_create_by(
   title: "Example title",
   body: "Example body"
+)
+Comment.find_or_create_by(
+  post: unique_post,
+  body: "Example comment body"
 )
 
 puts "Seed finished"

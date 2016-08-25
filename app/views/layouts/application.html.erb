@@ -6,14 +6,30 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.3/holder.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "Duet", root_path, class: "navbar-brand" %>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "", new_post_path, class: "btn btn-primary navbar-btn glyphicon glyphicon-pencil" %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="container">
-    <ul class="nav nav-tabs">
-      <li><%= link_to "Duet", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-    </ul>
 
     <% if flash[:notice] %>
       <div class="alert alert-success">
@@ -33,6 +49,5 @@
     <% end %>
     <%= yield %>
   </div>
-
 </body>
 </html>

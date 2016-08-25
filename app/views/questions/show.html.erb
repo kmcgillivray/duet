@@ -1,0 +1,9 @@
+<h1><%= @question.title %></h1>
+<p><%= @question.body %></p>
+<% if @question.resolved %>
+  <p>Answered</p>
+<% else %>
+  <p>Not answered</p>
+<% end %>
+<%= link_to "Edit", edit_question_path(@question), class: 'btn btn-primary' %>
+<%= link_to "Delete Question", @question, method: :delete, class: 'btn btn-danger' %>

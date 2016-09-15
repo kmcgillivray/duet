@@ -3,7 +3,7 @@
     <div class="card">
       <h1>Sign up</h1>
 
-      <%= form_for @user do |f| %>
+      <%= form_for @user, :url => {:action => :confirm } do |f| %>
         <% if @user.errors.any? %>
           <div class="alert alert-danger">
             <h4><%= pluralize(@user.errors.count, "error") %>.</h4>

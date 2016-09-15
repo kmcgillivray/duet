@@ -4,6 +4,7 @@
 <%= link_to "Delete topic", @topic, method: :delete, class: "btn btn-danger" %>
 
 <%= link_to "New post", new_topic_post_path(@topic), class: "btn btn-primary" %>
+<%= link_to "New sponsored post", new_topic_sponsored_post_path(@topic), class: "btn btn-primary" %>
 
 <p><%= @topic.description %></p>
 
@@ -11,4 +12,11 @@
   <h2><%= link_to post.title, topic_post_path(@topic, post) %></h2>
   <p>Submitted <%= time_ago_in_words(post.created_at) %> ago</p>
   <p><%= post.comments.count %> Comments</p>
+<% end %>
+
+<h2>Sponsored Posts</h2>
+
+<% @topic.sponsored_posts.each do |post| %>
+  <h2><%= link_to post.title, topic_sponsored_post_path(@topic, post) %></h2>
+  <p>Submitted <%= time_ago_in_words(post.created_at) %> ago</p>
 <% end %>

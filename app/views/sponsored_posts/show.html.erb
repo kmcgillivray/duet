@@ -1,0 +1,6 @@
+<div class="card">
+  <h1><%= @sponsored_post.title %></h1>
+  <p><%= @sponsored_post.body %></p>
+  <%= link_to "Edit", edit_topic_post_path(@sponsored_post.topic, @sponsored_post), class: 'btn btn-primary' %>
+  <%= link_to "Delete Post", [@sponsored_post.topic, @sponsored_post], method: :delete, class: 'btn btn-danger' %>
+</div>

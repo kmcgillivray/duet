@@ -2,7 +2,7 @@
   <div class="col-md-8 center-block">
     <div class="card">
       <h1>New Post</h1>
-      <%= form_for [@post.topic, @post] do |f| %>
+      <%= form_for [@topic, @post] do |f| %>
         <div class="form-group">
           <%= f.label :title, class: "sr-only" %>
           <%= f.text_field :title, class: "form-control", placeholder: "Enter post title" %>

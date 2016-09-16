@@ -1,3 +1,6 @@
-<h1>Edit Post</h1>
+<div class="card">
+  <h1>Edit Post</h1>
+  <%= render partial: 'form', locals: { topic: @post.topic, post: @post } %>
+</div>
 
-<%= render partial: 'form', locals: { topic: @post.topic, post: @post } %>
+<% parent_layout "app_view" %>

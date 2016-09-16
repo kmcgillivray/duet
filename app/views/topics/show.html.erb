@@ -1,14 +1,30 @@
-<h1><%= @topic.name %></h1>
-
-<%= link_to "Edit topic", edit_topic_path, class: "btn btn-primary" %>
-<%= link_to "Delete topic", @topic, method: :delete, class: "btn btn-danger" %>
+<div class="row">
+  <div class="col-xs-11">
+    <h1><%= @topic.name %></h1>
+  </div>
+  <div class="col-xs-1">
+    <div class="dropdown">
+      <a href="#" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="glyphicon glyphicon-option-vertical"></span>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dLabel">
+        <li><%= link_to "Edit topic", edit_topic_path %></li>
+        <li><%= link_to "Delete topic", @topic, method: :delete %></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <%= link_to "New post", new_topic_post_path(@topic), class: "btn btn-primary" %>
 
 <p><%= @topic.description %></p>
 
 <% @topic.posts.each do |post| %>
-  <h2><%= link_to post.title, topic_post_path(@topic, post) %></h2>
-  <p>Submitted <%= time_ago_in_words(post.created_at) %> ago</p>
-  <p><%= post.comments.count %> Comments</p>
+  <div class="card">
+    <h2><%= link_to post.title, topic_post_path(@topic, post) %></h2>
+    <p>Submitted <%= time_ago_in_words(post.created_at) %> ago</p>
+    <p><%= post.comments.count %> Comments</p>
+  </div>
 <% end %>
+
+<% parent_layout "app_view" %>

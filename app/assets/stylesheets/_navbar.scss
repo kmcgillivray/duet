@@ -1,0 +1,35 @@
+.navbar-default {
+  background-color: #FFF;
+  border: 0;
+  border-bottom: 1px solid #E7E7E7;
+  border-radius: 0;
+}
+.navbar-brand {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.navbar-nav li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: .9rem;
+}
+.navbar-right li {
+  margin-bottom: 0;
+}
+.navbar-default .navbar-nav .navbar-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+}
+.navbar-default .navbar-nav .btn-primary,
+.navbar-default .navbar-nav .btn-primary:hover {
+  color: $white;
+}
+.navbar-default .navbar-nav .btn-primary:hover {
+  background-color: darken($primary-color, 5%);
+}
+// .navbar-default .navbar-nav .navbar-btn {
+//   font-size: 1rem;
+//   color: #FFF;
+// }

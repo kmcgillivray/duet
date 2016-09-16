@@ -1,12 +1,13 @@
 /*
- *= require_tree .
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "colors";
 @import "global";
 @import "typography";
+@import "buttons";
 @import "navbar";
 @import "card-list";
 @import "card";

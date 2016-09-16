@@ -3,6 +3,10 @@
 <%= link_to "New topic", new_topic_path, class: "btn btn-primary" %>
 
 <% @topics.each do |topic| %>
-  <h2><%= link_to topic.name, topic %></h2>
-  <p><%= topic.description %></p>
+  <div class="card">
+    <h2><%= link_to topic.name, topic %></h2>
+    <p><%= topic.description %></p>
+  </div>
 <% end %>
+
+<% parent_layout "app_view" %>

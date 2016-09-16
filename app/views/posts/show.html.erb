@@ -4,3 +4,5 @@
   <%= link_to "Edit", edit_topic_post_path(@post.topic, @post), class: 'btn btn-primary' %>
   <%= link_to "Delete Post", [@post.topic, @post], method: :delete, class: 'btn btn-danger' %>
 </div>
+
+<% parent_layout "app_view" %>
